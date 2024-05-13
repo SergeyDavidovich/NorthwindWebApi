@@ -5,8 +5,8 @@ using System.Collections.ObjectModel;
 
 namespace NorthwindWebApi.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
+    [Route("/")]
     public class CategoryController : ControllerBase
     {
         [HttpGet("Categories")]
