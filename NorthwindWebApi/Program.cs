@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using NorthwindWebApi.Models;
+
 namespace NorthwindWebApi
 {
     public class Program
@@ -10,6 +13,8 @@ namespace NorthwindWebApi
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddDbContext<NorthwindSQLitedbContext>(options=>options.UseSqlite("FileName=App_Data/NorthwindSQLite.db"));
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
