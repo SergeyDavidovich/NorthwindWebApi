@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using NorthwindWebApi.Models;
+using System.Text.Json.Serialization;
 
 namespace NorthwindWebApi
 {
@@ -12,7 +13,13 @@ namespace NorthwindWebApi
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            //builder.Services.AddControllers();
+            builder.Services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+                options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+            });
+
             builder.Services.AddDbContext<NorthwindSQLitedbContext>(options=>options.UseSqlite("FileName=App_Data/NorthwindSQLite.db"));
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
