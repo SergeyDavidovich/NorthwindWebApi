@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using NorthwindWebApi.Models;
+using SwaggerThemes;
 using System.Text.Json.Serialization;
 
 namespace NorthwindWebApi
@@ -41,6 +42,7 @@ namespace NorthwindWebApi
             {
             }
             app.UseSwagger();
+            app.UseSwaggerThemes(Theme.UniversalDark);
             app.UseSwaggerUI();
 
             app.UseHttpsRedirection();

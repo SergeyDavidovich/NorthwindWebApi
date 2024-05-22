@@ -25,11 +25,11 @@ namespace NorthwindWebApi.Controllers
         //[HttpPost]
         //public async Task<ActionResult<Category>> PostTodoItem(Category todoItem)
         //{
-        //    _context.TodoItems.Add(todoItem);
+        //    _context.Categories.Add(Category);
         //    await _context.SaveChangesAsync();
 
         //    //    return CreatedAtAction("PostTodoItem", new { id = todoItem.Id }, todoItem);
-        //    return CreatedAtAction(nameof(PostTodoItem), new { id = todoItem.Id }, todoItem);
+        //    return CreatedAtAction(nameof(PostTodoItem), new { id = c.Id }, todoItem);
         //}
     }
 }
