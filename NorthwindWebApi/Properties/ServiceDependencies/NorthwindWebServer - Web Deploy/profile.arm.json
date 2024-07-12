@@ -21,7 +21,7 @@
     },
     "resourceName": {
       "type": "string",
-      "defaultValue": "NorthwindWebApiSample",
+      "defaultValue": "NorthwindWebServer",
       "metadata": {
         "description": "Name of the main resource to be created by this template."
       }
